@@ -1,6 +1,6 @@
 # unit-001 downloads
 
-Public release downloads for unit-001, a durable coding agent. Current release: **0.0.5**.
+Public release downloads for unit-001, a durable coding agent. Current release: **0.0.6**.
 
 ## Download and install
 
@@ -10,13 +10,15 @@ Supported target: **Ubuntu Server 24.04 LTS, x86-64**. Releases include Node and
 curl --fail --location --output unit-001-linux-x64.tar.gz \
   https://github.com/francman/unit-001-releases/releases/latest/download/unit-001-linux-x64.tar.gz
 tar -xzf unit-001-linux-x64.tar.gz
-cd unit-001-0.0.5-linux-x64
+cd unit-001-0.0.6-linux-x64
 sudo ./install.sh
 sudo agent setup
 sudo agent
 ```
 
 Full-screen setup guides provider selection with visible search, subscription sign-in or masked API key entry, model selection and optional service startup. Then run `sudo agent` to open the running agent workspace; `Ctrl+D` detaches without stopping it. Use `sudo ./install.sh --name bob` to name the installed agent; subsequent commands become `sudo bob ...`.
+
+Session memory survives restarts. Use `/memory` in the workspace or `sudo agent memory stats|recall|remember|forget|sleep`; forgetting requires confirmation and retains conversation history. `/status` reports the running owner process. Memory is session-scoped; autonomous mission scheduling remains separate work.
 
 No GitHub account, download token, signing key, npm installation, or manual update configuration is required. Bundles include public verification keys and configure update checks. Use `sudo agent update disable` to turn automatic update checks off.
 
