@@ -29,7 +29,7 @@ Setup, credentials, configuration, permissions, updates and lifecycle commands s
 For an existing 0.0.6 installation, apply the signed update, then run the explicit one-time migration while idle:
 
 ```bash
-sudo agent update
+sudo agent update apply
 sudo agent stop --yes
 sudo agent operator add YOUR_USERNAME
 sudo agent start
